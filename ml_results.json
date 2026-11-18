@@ -1,0 +1,4763 @@
+{
+  "generated_at": "2026-11-17T23:35:57.737923",
+  "dataset_info": {
+    "total_tasks": 500,
+    "total_tokens": 2052678,
+    "features": [
+      "input_tokens",
+      "output_tokens",
+      "latency",
+      "task_type_enc",
+      "difficulty_enc"
+    ],
+    "ground_truth_distribution": {
+      "Small": 165,
+      "Medium": 208,
+      "Large": 127
+    }
+  },
+  "kmeans": {
+    "optimal_k": 3,
+    "wcss": 577.33,
+    "silhouette_score": 0.4591,
+    "routing_accuracy": 96.2,
+    "cluster_mapping": {
+      "0": "Small",
+      "2": "Medium",
+      "1": "Large"
+    },
+    "elbow_analysis": [
+      {
+        "k": 2,
+        "wcss": 930.43,
+        "silhouette": 0.5664
+      },
+      {
+        "k": 3,
+        "wcss": 577.33,
+        "silhouette": 0.4591
+      },
+      {
+        "k": 4,
+        "wcss": 444.3,
+        "silhouette": 0.471
+      },
+      {
+        "k": 5,
+        "wcss": 394.27,
+        "silhouette": 0.4052
+      },
+      {
+        "k": 6,
+        "wcss": 365.86,
+        "silhouette": 0.3706
+      },
+      {
+        "k": 7,
+        "wcss": 354.38,
+        "silhouette": 0.3227
+      },
+      {
+        "k": 8,
+        "wcss": 329.56,
+        "silhouette": 0.3178
+      }
+    ],
+    "confusion_matrix": {
+      "Small": {
+        "Small": 153,
+        "Medium": 9,
+        "Large": 3
+      },
+      "Medium": {
+        "Small": 5,
+        "Medium": 202,
+        "Large": 1
+      },
+      "Large": {
+        "Small": 0,
+        "Medium": 1,
+        "Large": 126
+      }
+    }
+  },
+  "hmm": {
+    "num_states": 3,
+    "state_names": {
+      "0": "Lean Mode",
+      "1": "Balanced Mode",
+      "2": "Premium Mode"
+    },
+    "log_likelihood": -452.47,
+    "transition_matrix": [
+      [
+        0.7081,
+        0.2236,
+        0.0683
+      ],
+      [
+        0.1767,
+        0.6837,
+        0.1395
+      ],
+      [
+        0.0606,
+        0.2424,
+        0.697
+      ]
+    ],
+    "emission_matrix": [
+      [
+        0.92,
+        0.06,
+        0.02
+      ],
+      [
+        0.08,
+        0.84,
+        0.08
+      ],
+      [
+        0.02,
+        0.1,
+        0.88
+      ]
+    ],
+    "initial_distribution": [
+      0.65,
+      0.25,
+      0.1
+    ],
+    "premium_persistence_pct": 69.7
+  },
+  "comparison": {
+    "always_large": {
+      "cost": 770.2,
+      "accuracy": 98.0,
+      "latency": 4.2,
+      "cost_per_success": 1.572
+    },
+    "random": {
+      "cost": 329.65,
+      "accuracy": 34.6,
+      "latency": 2.85,
+      "cost_per_success": 1.905
+    },
+    "governor": {
+      "cost": 479.39,
+      "accuracy": 96.2,
+      "latency": 2.39,
+      "cost_per_success": 0.997
+    },
+    "savings": {
+      "rupees": 290.81,
+      "percent": 37.8,
+      "speedup": 1.8
+    }
+  },
+  "dashboard_kpis": {
+    "totalSpend": 479.39,
+    "baselineSpend": 770.2,
+    "costSavings": 37.8,
+    "successfulTasks": 96.2,
+    "costPerSuccess": 1.0,
+    "totalLLMCalls": 500,
+    "trendsVsPrevious": {
+      "spend": -37.75754492731498,
+      "savings": -12.2,
+      "successRate": 1.4,
+      "costPerSuccess": -58.0,
+      "llmCalls": 100.0
+    }
+  },
+  "model_distribution": [
+    {
+      "model": "Small",
+      "percentage": 31.6,
+      "calls": 158,
+      "cost": 5.92
+    },
+    {
+      "model": "Medium",
+      "percentage": 42.4,
+      "calls": 212,
+      "cost": 75.6
+    },
+    {
+      "model": "Large",
+      "percentage": 26.0,
+      "calls": 130,
+      "cost": 397.87
+    }
+  ],
+  "time_series": [
+    {
+      "timestamp": "2026-10-19T23:35:57.737243",
+      "label": "Oct 19",
+      "actualCost": 11.84,
+      "baselineCost": 22.45,
+      "tokenUsage": 60756,
+      "llmCalls": 16,
+      "successRate": 100.0,
+      "latency": 2.23,
+      "retryRate": 3.5,
+      "costPerSuccess": 0.74
+    },
+    {
+      "timestamp": "2026-10-20T23:35:57.737243",
+      "label": "Oct 20",
+      "actualCost": 11.1,
+      "baselineCost": 20.0,
+      "tokenUsage": 52458,
+      "llmCalls": 16,
+      "successRate": 100.0,
+      "latency": 1.85,
+      "retryRate": 3.5,
+      "costPerSuccess": 0.694
+    },
+    {
+      "timestamp": "2026-10-21T23:35:57.737243",
+      "label": "Oct 21",
+      "actualCost": 10.76,
+      "baselineCost": 20.07,
+      "tokenUsage": 54869,
+      "llmCalls": 16,
+      "successRate": 100.0,
+      "latency": 1.84,
+      "retryRate": 3.5,
+      "costPerSuccess": 0.672
+    },
+    {
+      "timestamp": "2026-10-22T23:35:57.737243",
+      "label": "Oct 22",
+      "actualCost": 36.37,
+      "baselineCost": 40.54,
+      "tokenUsage": 107667,
+      "llmCalls": 16,
+      "successRate": 100.0,
+      "latency": 3.71,
+      "retryRate": 3.5,
+      "costPerSuccess": 2.273
+    },
+    {
+      "timestamp": "2026-10-23T23:35:57.737243",
+      "label": "Oct 23",
+      "actualCost": 9.3,
+      "baselineCost": 20.2,
+      "tokenUsage": 53652,
+      "llmCalls": 16,
+      "successRate": 93.8,
+      "latency": 1.92,
+      "retryRate": 3.5,
+      "costPerSuccess": 0.62
+    },
+    {
+      "timestamp": "2026-10-24T23:35:57.737243",
+      "label": "Oct 24",
+      "actualCost": 1.28,
+      "baselineCost": 10.38,
+      "tokenUsage": 28247,
+      "llmCalls": 16,
+      "successRate": 100.0,
+      "latency": 1.02,
+      "retryRate": 3.5,
+      "costPerSuccess": 0.08
+    },
+    {
+      "timestamp": "2026-10-25T23:35:57.737243",
+      "label": "Oct 25",
+      "actualCost": 25.71,
+      "baselineCost": 34.49,
+      "tokenUsage": 92582,
+      "llmCalls": 16,
+      "successRate": 100.0,
+      "latency": 2.86,
+      "retryRate": 3.5,
+      "costPerSuccess": 1.607
+    },
+    {
+      "timestamp": "2026-10-26T23:35:57.737243",
+      "label": "Oct 26",
+      "actualCost": 25.26,
+      "baselineCost": 33.61,
+      "tokenUsage": 88170,
+      "llmCalls": 16,
+      "successRate": 100.0,
+      "latency": 3.22,
+      "retryRate": 3.5,
+      "costPerSuccess": 1.579
+    },
+    {
+      "timestamp": "2026-10-27T23:35:57.737243",
+      "label": "Oct 27",
+      "actualCost": 9.99,
+      "baselineCost": 23.47,
+      "tokenUsage": 62203,
+      "llmCalls": 16,
+      "successRate": 93.8,
+      "latency": 2.36,
+      "retryRate": 3.5,
+      "costPerSuccess": 0.666
+    },
+    {
+      "timestamp": "2026-10-28T23:35:57.737243",
+      "label": "Oct 28",
+      "actualCost": 19.59,
+      "baselineCost": 26.58,
+      "tokenUsage": 72114,
+      "llmCalls": 16,
+      "successRate": 100.0,
+      "latency": 2.52,
+      "retryRate": 3.5,
+      "costPerSuccess": 1.224
+    },
+    {
+      "timestamp": "2026-10-29T23:35:57.737243",
+      "label": "Oct 29",
+      "actualCost": 19.5,
+      "baselineCost": 26.47,
+      "tokenUsage": 70113,
+      "llmCalls": 16,
+      "successRate": 100.0,
+      "latency": 2.78,
+      "retryRate": 3.5,
+      "costPerSuccess": 1.219
+    },
+    {
+      "timestamp": "2026-10-30T23:35:57.737243",
+      "label": "Oct 30",
+      "actualCost": 11.27,
+      "baselineCost": 20.26,
+      "tokenUsage": 54807,
+      "llmCalls": 16,
+      "successRate": 100.0,
+      "latency": 2.06,
+      "retryRate": 3.5,
+      "costPerSuccess": 0.704
+    },
+    {
+      "timestamp": "2026-10-31T23:35:57.737243",
+      "label": "Oct 31",
+      "actualCost": 4.19,
+      "baselineCost": 18.08,
+      "tokenUsage": 48516,
+      "llmCalls": 16,
+      "successRate": 100.0,
+      "latency": 1.73,
+      "retryRate": 3.5,
+      "costPerSuccess": 0.262
+    },
+    {
+      "timestamp": "2026-11-01T23:35:57.737243",
+      "label": "Nov 01",
+      "actualCost": 16.58,
+      "baselineCost": 23.87,
+      "tokenUsage": 61536,
+      "llmCalls": 16,
+      "successRate": 100.0,
+      "latency": 2.5,
+      "retryRate": 3.5,
+      "costPerSuccess": 1.036
+    },
+    {
+      "timestamp": "2026-11-02T23:35:57.737243",
+      "label": "Nov 02",
+      "actualCost": 7.48,
+      "baselineCost": 20.0,
+      "tokenUsage": 54323,
+      "llmCalls": 16,
+      "successRate": 100.0,
+      "latency": 2.01,
+      "retryRate": 3.5,
+      "costPerSuccess": 0.468
+    },
+    {
+      "timestamp": "2026-11-03T23:35:57.737243",
+      "label": "Nov 03",
+      "actualCost": 17.03,
+      "baselineCost": 28.81,
+      "tokenUsage": 77770,
+      "llmCalls": 16,
+      "successRate": 87.5,
+      "latency": 2.77,
+      "retryRate": 3.5,
+      "costPerSuccess": 1.216
+    },
+    {
+      "timestamp": "2026-11-04T23:35:57.737243",
+      "label": "Nov 04",
+      "actualCost": 16.26,
+      "baselineCost": 26.05,
+      "tokenUsage": 69439,
+      "llmCalls": 16,
+      "successRate": 93.8,
+      "latency": 2.2,
+      "retryRate": 3.5,
+      "costPerSuccess": 1.084
+    },
+    {
+      "timestamp": "2026-11-05T23:35:57.737243",
+      "label": "Nov 05",
+      "actualCost": 24.77,
+      "baselineCost": 31.03,
+      "tokenUsage": 81752,
+      "llmCalls": 16,
+      "successRate": 93.8,
+      "latency": 3.07,
+      "retryRate": 3.5,
+      "costPerSuccess": 1.651
+    },
+    {
+      "timestamp": "2026-11-06T23:35:57.737243",
+      "label": "Nov 06",
+      "actualCost": 16.81,
+      "baselineCost": 27.74,
+      "tokenUsage": 74228,
+      "llmCalls": 16,
+      "successRate": 87.5,
+      "latency": 2.3,
+      "retryRate": 3.5,
+      "costPerSuccess": 1.201
+    },
+    {
+      "timestamp": "2026-11-07T23:35:57.737243",
+      "label": "Nov 07",
+      "actualCost": 25.44,
+      "baselineCost": 29.64,
+      "tokenUsage": 77679,
+      "llmCalls": 16,
+      "successRate": 93.8,
+      "latency": 2.96,
+      "retryRate": 3.5,
+      "costPerSuccess": 1.696
+    },
+    {
+      "timestamp": "2026-11-08T23:35:57.737243",
+      "label": "Nov 08",
+      "actualCost": 13.6,
+      "baselineCost": 22.09,
+      "tokenUsage": 57786,
+      "llmCalls": 16,
+      "successRate": 100.0,
+      "latency": 2.04,
+      "retryRate": 3.5,
+      "costPerSuccess": 0.85
+    },
+    {
+      "timestamp": "2026-11-09T23:35:57.737243",
+      "label": "Nov 09",
+      "actualCost": 2.67,
+      "baselineCost": 13.43,
+      "tokenUsage": 36148,
+      "llmCalls": 16,
+      "successRate": 87.5,
+      "latency": 1.5,
+      "retryRate": 3.5,
+      "costPerSuccess": 0.19
+    },
+    {
+      "timestamp": "2026-11-10T23:35:57.737243",
+      "label": "Nov 10",
+      "actualCost": 24.64,
+      "baselineCost": 32.56,
+      "tokenUsage": 88350,
+      "llmCalls": 16,
+      "successRate": 100.0,
+      "latency": 3.26,
+      "retryRate": 3.5,
+      "costPerSuccess": 1.54
+    },
+    {
+      "timestamp": "2026-11-11T23:35:57.737243",
+      "label": "Nov 11",
+      "actualCost": 9.11,
+      "baselineCost": 19.72,
+      "tokenUsage": 52706,
+      "llmCalls": 16,
+      "successRate": 93.8,
+      "latency": 1.93,
+      "retryRate": 3.5,
+      "costPerSuccess": 0.607
+    },
+    {
+      "timestamp": "2026-11-12T23:35:57.737243",
+      "label": "Nov 12",
+      "actualCost": 16.83,
+      "baselineCost": 28.17,
+      "tokenUsage": 75780,
+      "llmCalls": 16,
+      "successRate": 100.0,
+      "latency": 2.79,
+      "retryRate": 3.5,
+      "costPerSuccess": 1.052
+    },
+    {
+      "timestamp": "2026-11-13T23:35:57.737243",
+      "label": "Nov 13",
+      "actualCost": 20.02,
+      "baselineCost": 30.34,
+      "tokenUsage": 79179,
+      "llmCalls": 16,
+      "successRate": 93.8,
+      "latency": 3.42,
+      "retryRate": 3.5,
+      "costPerSuccess": 1.335
+    },
+    {
+      "timestamp": "2026-11-14T23:35:57.737243",
+      "label": "Nov 14",
+      "actualCost": 6.26,
+      "baselineCost": 17.5,
+      "tokenUsage": 46227,
+      "llmCalls": 16,
+      "successRate": 87.5,
+      "latency": 1.71,
+      "retryRate": 3.5,
+      "costPerSuccess": 0.447
+    },
+    {
+      "timestamp": "2026-11-15T23:35:57.737243",
+      "label": "Nov 15",
+      "actualCost": 6.09,
+      "baselineCost": 14.62,
+      "tokenUsage": 39683,
+      "llmCalls": 16,
+      "successRate": 100.0,
+      "latency": 1.61,
+      "retryRate": 3.5,
+      "costPerSuccess": 0.381
+    },
+    {
+      "timestamp": "2026-11-16T23:35:57.737243",
+      "label": "Nov 16",
+      "actualCost": 23.03,
+      "baselineCost": 30.79,
+      "tokenUsage": 82127,
+      "llmCalls": 16,
+      "successRate": 93.8,
+      "latency": 3.07,
+      "retryRate": 3.5,
+      "costPerSuccess": 1.536
+    },
+    {
+      "timestamp": "2026-11-17T23:35:57.737243",
+      "label": "Nov 17",
+      "actualCost": 26.51,
+      "baselineCost": 34.02,
+      "tokenUsage": 90812,
+      "llmCalls": 16,
+      "successRate": 100.0,
+      "latency": 3.29,
+      "retryRate": 3.5,
+      "costPerSuccess": 1.657
+    }
+  ],
+  "executions": [
+    {
+      "id": "EXEC-8400",
+      "taskId": "TASK-001",
+      "taskName": "Conversational \u2014 Easy complexity #1",
+      "taskDescription": "Autonomous LLM workload processing 1101 input tokens",
+      "taskType": "Conversational",
+      "difficulty": "Easy",
+      "selectedModel": "Small",
+      "modelReasoning": "K-Means centroid nearest to token profile (1101 in, 117 out). HMM regime: Lean Mode.",
+      "status": "Success",
+      "cost": 0.029,
+      "baselineCost": 0.4356,
+      "savings": 93.3,
+      "latency": 0.5,
+      "inputTokens": 1101,
+      "outputTokens": 117,
+      "optimizedTokens": 792,
+      "originalTokens": 1101,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-28T23:37:55.855281",
+      "completedAt": "2026-10-28T23:37:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-28T23:37:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 1101 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 1101
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-28T23:37:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Small model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 0
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-28T23:37:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Lean Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Lean Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-28T23:37:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Small endpoint in 0.5s",
+          "duration": 500,
+          "status": "completed",
+          "metadata": {
+            "model": "Small"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8401",
+      "taskId": "TASK-002",
+      "taskName": "Extraction \u2014 Easy complexity #2",
+      "taskDescription": "Autonomous LLM workload processing 1634 input tokens",
+      "taskType": "Extraction",
+      "difficulty": "Easy",
+      "selectedModel": "Small",
+      "modelReasoning": "K-Means centroid nearest to token profile (1634 in, 214 out). HMM regime: Lean Mode.",
+      "status": "Success",
+      "cost": 0.0455,
+      "baselineCost": 0.6828,
+      "savings": 93.3,
+      "latency": 0.38,
+      "inputTokens": 1634,
+      "outputTokens": 214,
+      "optimizedTokens": 1176,
+      "originalTokens": 1634,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-29T00:38:55.855281",
+      "completedAt": "2026-10-29T00:38:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-29T00:38:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 1634 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 1634
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-29T00:38:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Small model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 0
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-29T00:38:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Lean Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Lean Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-29T00:38:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Small endpoint in 0.38s",
+          "duration": 380,
+          "status": "completed",
+          "metadata": {
+            "model": "Small"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8402",
+      "taskId": "TASK-003",
+      "taskName": "Classification \u2014 Easy complexity #3",
+      "taskDescription": "Autonomous LLM workload processing 2154 input tokens",
+      "taskType": "Classification",
+      "difficulty": "Easy",
+      "selectedModel": "Small",
+      "modelReasoning": "K-Means centroid nearest to token profile (2154 in, 100 out). HMM regime: Lean Mode.",
+      "status": "Success",
+      "cost": 0.0491,
+      "baselineCost": 0.7362,
+      "savings": 93.3,
+      "latency": 1.08,
+      "inputTokens": 2154,
+      "outputTokens": 100,
+      "optimizedTokens": 1550,
+      "originalTokens": 2154,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-29T01:19:55.855281",
+      "completedAt": "2026-10-29T01:19:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-29T01:19:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 2154 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 2154
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-29T01:19:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Small model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 0
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-29T01:19:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Lean Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Lean Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-29T01:19:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Small endpoint in 1.08s",
+          "duration": 1080,
+          "status": "completed",
+          "metadata": {
+            "model": "Small"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8403",
+      "taskId": "TASK-004",
+      "taskName": "Reasoning \u2014 Medium complexity #4",
+      "taskDescription": "Autonomous LLM workload processing 2398 input tokens",
+      "taskType": "Reasoning",
+      "difficulty": "Medium",
+      "selectedModel": "Medium",
+      "modelReasoning": "K-Means centroid nearest to token profile (2398 in, 433 out). HMM regime: Balanced Mode.",
+      "status": "Success",
+      "cost": 0.2958,
+      "baselineCost": 1.1091,
+      "savings": 73.3,
+      "latency": 2.81,
+      "inputTokens": 2398,
+      "outputTokens": 433,
+      "optimizedTokens": 1726,
+      "originalTokens": 2398,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-29T02:06:55.855281",
+      "completedAt": "2026-10-29T02:06:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-29T02:06:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 2398 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 2398
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-29T02:06:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Medium model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 2
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-29T02:06:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Balanced Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Balanced Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-29T02:06:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Medium endpoint in 2.81s",
+          "duration": 2810,
+          "status": "completed",
+          "metadata": {
+            "model": "Medium"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8404",
+      "taskId": "TASK-005",
+      "taskName": "Extraction \u2014 Easy complexity #5",
+      "taskDescription": "Autonomous LLM workload processing 3898 input tokens",
+      "taskType": "Extraction",
+      "difficulty": "Easy",
+      "selectedModel": "Medium",
+      "modelReasoning": "K-Means centroid nearest to token profile (3898 in, 571 out). HMM regime: Balanced Mode.",
+      "status": "Success",
+      "cost": 0.4489,
+      "baselineCost": 1.6833,
+      "savings": 73.3,
+      "latency": 2.38,
+      "inputTokens": 3898,
+      "outputTokens": 571,
+      "optimizedTokens": 2806,
+      "originalTokens": 3898,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-29T03:01:55.855281",
+      "completedAt": "2026-10-29T03:01:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-29T03:01:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 3898 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 3898
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-29T03:01:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Medium model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 2
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-29T03:01:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Balanced Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Balanced Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-29T03:01:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Medium endpoint in 2.38s",
+          "duration": 2380,
+          "status": "completed",
+          "metadata": {
+            "model": "Medium"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8405",
+      "taskId": "TASK-006",
+      "taskName": "Conversational \u2014 Easy complexity #6",
+      "taskDescription": "Autonomous LLM workload processing 763 input tokens",
+      "taskType": "Conversational",
+      "difficulty": "Easy",
+      "selectedModel": "Small",
+      "modelReasoning": "K-Means centroid nearest to token profile (763 in, 119 out). HMM regime: Lean Mode.",
+      "status": "Success",
+      "cost": 0.0224,
+      "baselineCost": 0.336,
+      "savings": 93.3,
+      "latency": 1.26,
+      "inputTokens": 763,
+      "outputTokens": 119,
+      "optimizedTokens": 549,
+      "originalTokens": 763,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-29T03:59:55.855281",
+      "completedAt": "2026-10-29T03:59:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-29T03:59:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 763 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 763
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-29T03:59:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Small model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 0
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-29T03:59:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Lean Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Lean Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-29T03:59:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Small endpoint in 1.26s",
+          "duration": 1260,
+          "status": "completed",
+          "metadata": {
+            "model": "Small"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8406",
+      "taskId": "TASK-007",
+      "taskName": "Extraction \u2014 Easy complexity #7",
+      "taskDescription": "Autonomous LLM workload processing 1972 input tokens",
+      "taskType": "Extraction",
+      "difficulty": "Easy",
+      "selectedModel": "Small",
+      "modelReasoning": "K-Means centroid nearest to token profile (1972 in, 128 out). HMM regime: Lean Mode.",
+      "status": "Success",
+      "cost": 0.0471,
+      "baselineCost": 0.7068,
+      "savings": 93.3,
+      "latency": 1.09,
+      "inputTokens": 1972,
+      "outputTokens": 128,
+      "optimizedTokens": 1419,
+      "originalTokens": 1972,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-29T04:37:55.855281",
+      "completedAt": "2026-10-29T04:37:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-29T04:37:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 1972 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 1972
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-29T04:37:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Small model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 0
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-29T04:37:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Lean Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Lean Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-29T04:37:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Small endpoint in 1.09s",
+          "duration": 1090,
+          "status": "completed",
+          "metadata": {
+            "model": "Small"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8407",
+      "taskId": "TASK-008",
+      "taskName": "Extraction \u2014 Easy complexity #8",
+      "taskDescription": "Autonomous LLM workload processing 1546 input tokens",
+      "taskType": "Extraction",
+      "difficulty": "Easy",
+      "selectedModel": "Small",
+      "modelReasoning": "K-Means centroid nearest to token profile (1546 in, 157 out). HMM regime: Lean Mode.",
+      "status": "Success",
+      "cost": 0.0403,
+      "baselineCost": 0.6051,
+      "savings": 93.3,
+      "latency": 0.63,
+      "inputTokens": 1546,
+      "outputTokens": 157,
+      "optimizedTokens": 1113,
+      "originalTokens": 1546,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-29T05:32:55.855281",
+      "completedAt": "2026-10-29T05:32:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-29T05:32:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 1546 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 1546
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-29T05:32:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Small model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 0
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-29T05:32:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Lean Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Lean Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-29T05:32:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Small endpoint in 0.63s",
+          "duration": 630,
+          "status": "completed",
+          "metadata": {
+            "model": "Small"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8408",
+      "taskId": "TASK-009",
+      "taskName": "Coding \u2014 Medium complexity #9",
+      "taskDescription": "Autonomous LLM workload processing 3883 input tokens",
+      "taskType": "Coding",
+      "difficulty": "Medium",
+      "selectedModel": "Medium",
+      "modelReasoning": "K-Means centroid nearest to token profile (3883 in, 266 out). HMM regime: Balanced Mode.",
+      "status": "Success",
+      "cost": 0.3745,
+      "baselineCost": 1.4043,
+      "savings": 73.3,
+      "latency": 2.73,
+      "inputTokens": 3883,
+      "outputTokens": 266,
+      "optimizedTokens": 2795,
+      "originalTokens": 3883,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-29T06:17:55.855281",
+      "completedAt": "2026-10-29T06:17:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-29T06:17:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 3883 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 3883
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-29T06:17:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Medium model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 2
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-29T06:17:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Balanced Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Balanced Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-29T06:17:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Medium endpoint in 2.73s",
+          "duration": 2730,
+          "status": "completed",
+          "metadata": {
+            "model": "Medium"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8409",
+      "taskId": "TASK-010",
+      "taskName": "Coding \u2014 Medium complexity #10",
+      "taskDescription": "Autonomous LLM workload processing 5670 input tokens",
+      "taskType": "Coding",
+      "difficulty": "Medium",
+      "selectedModel": "Large",
+      "modelReasoning": "K-Means centroid nearest to token profile (5670 in, 1271 out). HMM regime: Premium Mode.",
+      "status": "Success",
+      "cost": 2.8449,
+      "baselineCost": 2.8449,
+      "savings": 0.0,
+      "latency": 4.5,
+      "inputTokens": 5670,
+      "outputTokens": 1271,
+      "optimizedTokens": 4082,
+      "originalTokens": 5670,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-29T07:19:55.855281",
+      "completedAt": "2026-10-29T07:19:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-29T07:19:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 5670 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 5670
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-29T07:19:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Large model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 1
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-29T07:19:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Premium Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Premium Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-29T07:19:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Large endpoint in 4.5s",
+          "duration": 4500,
+          "status": "completed",
+          "metadata": {
+            "model": "Large"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8410",
+      "taskId": "TASK-011",
+      "taskName": "Extraction \u2014 Medium complexity #11",
+      "taskDescription": "Autonomous LLM workload processing 3729 input tokens",
+      "taskType": "Extraction",
+      "difficulty": "Medium",
+      "selectedModel": "Medium",
+      "modelReasoning": "K-Means centroid nearest to token profile (3729 in, 549 out). HMM regime: Premium Mode.",
+      "status": "Success",
+      "cost": 0.4301,
+      "baselineCost": 1.6128,
+      "savings": 73.3,
+      "latency": 2.01,
+      "inputTokens": 3729,
+      "outputTokens": 549,
+      "optimizedTokens": 2684,
+      "originalTokens": 3729,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-29T08:06:55.855281",
+      "completedAt": "2026-10-29T08:06:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-29T08:06:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 3729 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 3729
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-29T08:06:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Medium model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 2
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-29T08:06:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Premium Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Premium Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-29T08:06:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Medium endpoint in 2.01s",
+          "duration": 2009,
+          "status": "completed",
+          "metadata": {
+            "model": "Medium"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8411",
+      "taskId": "TASK-012",
+      "taskName": "Reasoning \u2014 Hard complexity #12",
+      "taskDescription": "Autonomous LLM workload processing 7895 input tokens",
+      "taskType": "Reasoning",
+      "difficulty": "Hard",
+      "selectedModel": "Large",
+      "modelReasoning": "K-Means centroid nearest to token profile (7895 in, 648 out). HMM regime: Premium Mode.",
+      "status": "Success",
+      "cost": 2.9517,
+      "baselineCost": 2.9517,
+      "savings": 0.0,
+      "latency": 5.73,
+      "inputTokens": 7895,
+      "outputTokens": 648,
+      "optimizedTokens": 5684,
+      "originalTokens": 7895,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-29T08:50:55.855281",
+      "completedAt": "2026-10-29T08:50:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-29T08:50:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 7895 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 7895
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-29T08:50:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Large model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 1
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-29T08:50:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Premium Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Premium Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-29T08:50:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Large endpoint in 5.73s",
+          "duration": 5730,
+          "status": "completed",
+          "metadata": {
+            "model": "Large"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8412",
+      "taskId": "TASK-013",
+      "taskName": "Coding \u2014 Hard complexity #13",
+      "taskDescription": "Autonomous LLM workload processing 7240 input tokens",
+      "taskType": "Coding",
+      "difficulty": "Hard",
+      "selectedModel": "Large",
+      "modelReasoning": "K-Means centroid nearest to token profile (7240 in, 1079 out). HMM regime: Premium Mode.",
+      "status": "Success",
+      "cost": 3.1431,
+      "baselineCost": 3.1431,
+      "savings": 0.0,
+      "latency": 4.6,
+      "inputTokens": 7240,
+      "outputTokens": 1079,
+      "optimizedTokens": 5212,
+      "originalTokens": 7240,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-29T09:35:55.855281",
+      "completedAt": "2026-10-29T09:35:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-29T09:35:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 7240 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 7240
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-29T09:35:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Large model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 1
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-29T09:35:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Premium Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Premium Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-29T09:35:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Large endpoint in 4.6s",
+          "duration": 4600,
+          "status": "completed",
+          "metadata": {
+            "model": "Large"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8413",
+      "taskId": "TASK-014",
+      "taskName": "Extraction \u2014 Hard complexity #14",
+      "taskDescription": "Autonomous LLM workload processing 2428 input tokens",
+      "taskType": "Extraction",
+      "difficulty": "Hard",
+      "selectedModel": "Medium",
+      "modelReasoning": "K-Means centroid nearest to token profile (2428 in, 400 out). HMM regime: Balanced Mode.",
+      "status": "Success",
+      "cost": 0.2902,
+      "baselineCost": 1.0884,
+      "savings": 73.3,
+      "latency": 2.03,
+      "inputTokens": 2428,
+      "outputTokens": 400,
+      "optimizedTokens": 1748,
+      "originalTokens": 2428,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-29T10:33:55.855281",
+      "completedAt": "2026-10-29T10:33:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-29T10:33:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 2428 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 2428
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-29T10:33:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Medium model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 2
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-29T10:33:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Balanced Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Balanced Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-29T10:33:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Medium endpoint in 2.03s",
+          "duration": 2029,
+          "status": "completed",
+          "metadata": {
+            "model": "Medium"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8414",
+      "taskId": "TASK-015",
+      "taskName": "Summary \u2014 Medium complexity #15",
+      "taskDescription": "Autonomous LLM workload processing 3982 input tokens",
+      "taskType": "Summary",
+      "difficulty": "Medium",
+      "selectedModel": "Medium",
+      "modelReasoning": "K-Means centroid nearest to token profile (3982 in, 570 out). HMM regime: Balanced Mode.",
+      "status": "Success",
+      "cost": 0.4554,
+      "baselineCost": 1.7076,
+      "savings": 73.3,
+      "latency": 1.77,
+      "inputTokens": 3982,
+      "outputTokens": 570,
+      "optimizedTokens": 2867,
+      "originalTokens": 3982,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-29T11:21:55.855281",
+      "completedAt": "2026-10-29T11:21:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-29T11:21:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 3982 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 3982
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-29T11:21:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Medium model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 2
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-29T11:21:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Balanced Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Balanced Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-29T11:21:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Medium endpoint in 1.77s",
+          "duration": 1770,
+          "status": "completed",
+          "metadata": {
+            "model": "Medium"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8415",
+      "taskId": "TASK-016",
+      "taskName": "Summary \u2014 Medium complexity #16",
+      "taskDescription": "Autonomous LLM workload processing 3426 input tokens",
+      "taskType": "Summary",
+      "difficulty": "Medium",
+      "selectedModel": "Medium",
+      "modelReasoning": "K-Means centroid nearest to token profile (3426 in, 415 out). HMM regime: Balanced Mode.",
+      "status": "Success",
+      "cost": 0.3737,
+      "baselineCost": 1.4013,
+      "savings": 73.3,
+      "latency": 2.13,
+      "inputTokens": 3426,
+      "outputTokens": 415,
+      "optimizedTokens": 2466,
+      "originalTokens": 3426,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-29T12:16:55.855281",
+      "completedAt": "2026-10-29T12:16:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-29T12:16:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 3426 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 3426
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-29T12:16:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Medium model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 2
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-29T12:16:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Balanced Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Balanced Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-29T12:16:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Medium endpoint in 2.13s",
+          "duration": 2130,
+          "status": "completed",
+          "metadata": {
+            "model": "Medium"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8416",
+      "taskId": "TASK-017",
+      "taskName": "Summary \u2014 Medium complexity #17",
+      "taskDescription": "Autonomous LLM workload processing 2693 input tokens",
+      "taskType": "Summary",
+      "difficulty": "Medium",
+      "selectedModel": "Medium",
+      "modelReasoning": "K-Means centroid nearest to token profile (2693 in, 540 out). HMM regime: Balanced Mode.",
+      "status": "Success",
+      "cost": 0.345,
+      "baselineCost": 1.2939,
+      "savings": 73.3,
+      "latency": 3.0,
+      "inputTokens": 2693,
+      "outputTokens": 540,
+      "optimizedTokens": 1938,
+      "originalTokens": 2693,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-29T13:10:55.855281",
+      "completedAt": "2026-10-29T13:10:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-29T13:10:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 2693 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 2693
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-29T13:10:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Medium model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 2
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-29T13:10:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Balanced Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Balanced Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-29T13:10:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Medium endpoint in 3.0s",
+          "duration": 3000,
+          "status": "completed",
+          "metadata": {
+            "model": "Medium"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8417",
+      "taskId": "TASK-018",
+      "taskName": "Reasoning \u2014 Hard complexity #18",
+      "taskDescription": "Autonomous LLM workload processing 5325 input tokens",
+      "taskType": "Reasoning",
+      "difficulty": "Hard",
+      "selectedModel": "Large",
+      "modelReasoning": "K-Means centroid nearest to token profile (5325 in, 1275 out). HMM regime: Premium Mode.",
+      "status": "Success",
+      "cost": 2.745,
+      "baselineCost": 2.745,
+      "savings": 0.0,
+      "latency": 4.42,
+      "inputTokens": 5325,
+      "outputTokens": 1275,
+      "optimizedTokens": 3834,
+      "originalTokens": 5325,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-29T13:53:55.855281",
+      "completedAt": "2026-10-29T13:53:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-29T13:53:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 5325 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 5325
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-29T13:53:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Large model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 1
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-29T13:53:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Premium Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Premium Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-29T13:53:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Large endpoint in 4.42s",
+          "duration": 4420,
+          "status": "completed",
+          "metadata": {
+            "model": "Large"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8418",
+      "taskId": "TASK-019",
+      "taskName": "Agentic \u2014 Medium complexity #19",
+      "taskDescription": "Autonomous LLM workload processing 7893 input tokens",
+      "taskType": "Agentic",
+      "difficulty": "Medium",
+      "selectedModel": "Large",
+      "modelReasoning": "K-Means centroid nearest to token profile (7893 in, 1347 out). HMM regime: Premium Mode.",
+      "status": "Success",
+      "cost": 3.5802,
+      "baselineCost": 3.5802,
+      "savings": 0.0,
+      "latency": 5.15,
+      "inputTokens": 7893,
+      "outputTokens": 1347,
+      "optimizedTokens": 5682,
+      "originalTokens": 7893,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-29T14:47:55.855281",
+      "completedAt": "2026-10-29T14:47:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-29T14:47:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 7893 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 7893
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-29T14:47:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Large model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 1
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-29T14:47:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Premium Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Premium Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-29T14:47:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Large endpoint in 5.15s",
+          "duration": 5150,
+          "status": "completed",
+          "metadata": {
+            "model": "Large"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8419",
+      "taskId": "TASK-020",
+      "taskName": "Agentic \u2014 Hard complexity #20",
+      "taskDescription": "Autonomous LLM workload processing 6649 input tokens",
+      "taskType": "Agentic",
+      "difficulty": "Hard",
+      "selectedModel": "Large",
+      "modelReasoning": "K-Means centroid nearest to token profile (6649 in, 723 out). HMM regime: Premium Mode.",
+      "status": "Success",
+      "cost": 2.6454,
+      "baselineCost": 2.6454,
+      "savings": 0.0,
+      "latency": 3.64,
+      "inputTokens": 6649,
+      "outputTokens": 723,
+      "optimizedTokens": 4787,
+      "originalTokens": 6649,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-29T15:25:55.855281",
+      "completedAt": "2026-10-29T15:25:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-29T15:25:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 6649 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 6649
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-29T15:25:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Large model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 1
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-29T15:25:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Premium Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Premium Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-29T15:25:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Large endpoint in 3.64s",
+          "duration": 3640,
+          "status": "completed",
+          "metadata": {
+            "model": "Large"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8420",
+      "taskId": "TASK-021",
+      "taskName": "Summary \u2014 Medium complexity #21",
+      "taskDescription": "Autonomous LLM workload processing 3649 input tokens",
+      "taskType": "Summary",
+      "difficulty": "Medium",
+      "selectedModel": "Medium",
+      "modelReasoning": "K-Means centroid nearest to token profile (3649 in, 573 out). HMM regime: Balanced Mode.",
+      "status": "Success",
+      "cost": 0.4294,
+      "baselineCost": 1.6104,
+      "savings": 73.3,
+      "latency": 1.31,
+      "inputTokens": 3649,
+      "outputTokens": 573,
+      "optimizedTokens": 2627,
+      "originalTokens": 3649,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-29T16:16:55.855281",
+      "completedAt": "2026-10-29T16:16:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-29T16:16:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 3649 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 3649
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-29T16:16:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Medium model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 2
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-29T16:16:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Balanced Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Balanced Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-29T16:16:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Medium endpoint in 1.31s",
+          "duration": 1310,
+          "status": "completed",
+          "metadata": {
+            "model": "Medium"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8421",
+      "taskId": "TASK-022",
+      "taskName": "Summary \u2014 Easy complexity #22",
+      "taskDescription": "Autonomous LLM workload processing 1038 input tokens",
+      "taskType": "Summary",
+      "difficulty": "Easy",
+      "selectedModel": "Small",
+      "modelReasoning": "K-Means centroid nearest to token profile (1038 in, 198 out). HMM regime: Lean Mode.",
+      "status": "Success",
+      "cost": 0.0326,
+      "baselineCost": 0.4896,
+      "savings": 93.3,
+      "latency": 0.49,
+      "inputTokens": 1038,
+      "outputTokens": 198,
+      "optimizedTokens": 747,
+      "originalTokens": 1038,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-29T17:20:55.855281",
+      "completedAt": "2026-10-29T17:20:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-29T17:20:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 1038 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 1038
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-29T17:20:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Small model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 0
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-29T17:20:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Lean Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Lean Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-29T17:20:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Small endpoint in 0.49s",
+          "duration": 490,
+          "status": "completed",
+          "metadata": {
+            "model": "Small"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8422",
+      "taskId": "TASK-023",
+      "taskName": "Classification \u2014 Easy complexity #23",
+      "taskDescription": "Autonomous LLM workload processing 798 input tokens",
+      "taskType": "Classification",
+      "difficulty": "Easy",
+      "selectedModel": "Small",
+      "modelReasoning": "K-Means centroid nearest to token profile (798 in, 228 out). HMM regime: Lean Mode.",
+      "status": "Success",
+      "cost": 0.0296,
+      "baselineCost": 0.4446,
+      "savings": 93.3,
+      "latency": 0.8,
+      "inputTokens": 798,
+      "outputTokens": 228,
+      "optimizedTokens": 574,
+      "originalTokens": 798,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-29T18:09:55.855281",
+      "completedAt": "2026-10-29T18:09:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-29T18:09:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 798 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 798
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-29T18:09:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Small model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 0
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-29T18:09:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Lean Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Lean Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-29T18:09:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Small endpoint in 0.8s",
+          "duration": 800,
+          "status": "completed",
+          "metadata": {
+            "model": "Small"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8423",
+      "taskId": "TASK-024",
+      "taskName": "Classification \u2014 Easy complexity #24",
+      "taskDescription": "Autonomous LLM workload processing 724 input tokens",
+      "taskType": "Classification",
+      "difficulty": "Easy",
+      "selectedModel": "Small",
+      "modelReasoning": "K-Means centroid nearest to token profile (724 in, 163 out). HMM regime: Lean Mode.",
+      "status": "Success",
+      "cost": 0.0243,
+      "baselineCost": 0.3639,
+      "savings": 93.3,
+      "latency": 1.11,
+      "inputTokens": 724,
+      "outputTokens": 163,
+      "optimizedTokens": 521,
+      "originalTokens": 724,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-29T18:48:55.855281",
+      "completedAt": "2026-10-29T18:48:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-29T18:48:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 724 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 724
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-29T18:48:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Small model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 0
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-29T18:48:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Lean Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Lean Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-29T18:48:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Small endpoint in 1.11s",
+          "duration": 1110,
+          "status": "completed",
+          "metadata": {
+            "model": "Small"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8424",
+      "taskId": "TASK-025",
+      "taskName": "Summary \u2014 Easy complexity #25",
+      "taskDescription": "Autonomous LLM workload processing 975 input tokens",
+      "taskType": "Summary",
+      "difficulty": "Easy",
+      "selectedModel": "Small",
+      "modelReasoning": "K-Means centroid nearest to token profile (975 in, 131 out). HMM regime: Lean Mode.",
+      "status": "Success",
+      "cost": 0.0274,
+      "baselineCost": 0.4104,
+      "savings": 93.3,
+      "latency": 0.84,
+      "inputTokens": 975,
+      "outputTokens": 131,
+      "optimizedTokens": 702,
+      "originalTokens": 975,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-29T19:37:55.855281",
+      "completedAt": "2026-10-29T19:37:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-29T19:37:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 975 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 975
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-29T19:37:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Small model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 0
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-29T19:37:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Lean Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Lean Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-29T19:37:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Small endpoint in 0.84s",
+          "duration": 840,
+          "status": "completed",
+          "metadata": {
+            "model": "Small"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8425",
+      "taskId": "TASK-026",
+      "taskName": "Summary \u2014 Medium complexity #26",
+      "taskDescription": "Autonomous LLM workload processing 3535 input tokens",
+      "taskType": "Summary",
+      "difficulty": "Medium",
+      "selectedModel": "Medium",
+      "modelReasoning": "K-Means centroid nearest to token profile (3535 in, 526 out). HMM regime: Balanced Mode.",
+      "status": "Success",
+      "cost": 0.409,
+      "baselineCost": 1.5339,
+      "savings": 73.3,
+      "latency": 2.79,
+      "inputTokens": 3535,
+      "outputTokens": 526,
+      "optimizedTokens": 2545,
+      "originalTokens": 3535,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-29T20:32:55.855281",
+      "completedAt": "2026-10-29T20:32:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-29T20:32:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 3535 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 3535
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-29T20:32:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Medium model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 2
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-29T20:32:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Balanced Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Balanced Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-29T20:32:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Medium endpoint in 2.79s",
+          "duration": 2790,
+          "status": "completed",
+          "metadata": {
+            "model": "Medium"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8426",
+      "taskId": "TASK-027",
+      "taskName": "Reasoning \u2014 Medium complexity #27",
+      "taskDescription": "Autonomous LLM workload processing 4048 input tokens",
+      "taskType": "Reasoning",
+      "difficulty": "Medium",
+      "selectedModel": "Medium",
+      "modelReasoning": "K-Means centroid nearest to token profile (4048 in, 280 out). HMM regime: Balanced Mode.",
+      "status": "Success",
+      "cost": 0.391,
+      "baselineCost": 1.4664,
+      "savings": 73.3,
+      "latency": 1.51,
+      "inputTokens": 4048,
+      "outputTokens": 280,
+      "optimizedTokens": 2914,
+      "originalTokens": 4048,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-29T21:23:55.855281",
+      "completedAt": "2026-10-29T21:23:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-29T21:23:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 4048 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 4048
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-29T21:23:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Medium model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 2
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-29T21:23:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Balanced Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Balanced Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-29T21:23:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Medium endpoint in 1.51s",
+          "duration": 1510,
+          "status": "completed",
+          "metadata": {
+            "model": "Medium"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8427",
+      "taskId": "TASK-028",
+      "taskName": "Reasoning \u2014 Medium complexity #28",
+      "taskDescription": "Autonomous LLM workload processing 2517 input tokens",
+      "taskType": "Reasoning",
+      "difficulty": "Medium",
+      "selectedModel": "Medium",
+      "modelReasoning": "K-Means centroid nearest to token profile (2517 in, 347 out). HMM regime: Balanced Mode.",
+      "status": "Success",
+      "cost": 0.2846,
+      "baselineCost": 1.0674,
+      "savings": 73.3,
+      "latency": 1.76,
+      "inputTokens": 2517,
+      "outputTokens": 347,
+      "optimizedTokens": 1812,
+      "originalTokens": 2517,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-29T22:06:55.855281",
+      "completedAt": "2026-10-29T22:06:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-29T22:06:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 2517 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 2517
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-29T22:06:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Medium model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 2
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-29T22:06:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Balanced Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Balanced Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-29T22:06:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Medium endpoint in 1.76s",
+          "duration": 1760,
+          "status": "completed",
+          "metadata": {
+            "model": "Medium"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8428",
+      "taskId": "TASK-029",
+      "taskName": "Extraction \u2014 Easy complexity #29",
+      "taskDescription": "Autonomous LLM workload processing 716 input tokens",
+      "taskType": "Extraction",
+      "difficulty": "Easy",
+      "selectedModel": "Small",
+      "modelReasoning": "K-Means centroid nearest to token profile (716 in, 190 out). HMM regime: Lean Mode.",
+      "status": "Success",
+      "cost": 0.0257,
+      "baselineCost": 0.3858,
+      "savings": 93.3,
+      "latency": 0.43,
+      "inputTokens": 716,
+      "outputTokens": 190,
+      "optimizedTokens": 515,
+      "originalTokens": 716,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-29T22:57:55.855281",
+      "completedAt": "2026-10-29T22:57:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-29T22:57:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 716 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 716
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-29T22:57:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Small model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 0
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-29T22:57:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Lean Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Lean Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-29T22:57:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Small endpoint in 0.43s",
+          "duration": 430,
+          "status": "completed",
+          "metadata": {
+            "model": "Small"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8429",
+      "taskId": "TASK-030",
+      "taskName": "Extraction \u2014 Easy complexity #30",
+      "taskDescription": "Autonomous LLM workload processing 1785 input tokens",
+      "taskType": "Extraction",
+      "difficulty": "Easy",
+      "selectedModel": "Small",
+      "modelReasoning": "K-Means centroid nearest to token profile (1785 in, 212 out). HMM regime: Lean Mode.",
+      "status": "Success",
+      "cost": 0.0484,
+      "baselineCost": 0.7263,
+      "savings": 93.3,
+      "latency": 0.39,
+      "inputTokens": 1785,
+      "outputTokens": 212,
+      "optimizedTokens": 1285,
+      "originalTokens": 1785,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-29T23:55:55.855281",
+      "completedAt": "2026-10-29T23:55:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-29T23:55:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 1785 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 1785
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-29T23:55:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Small model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 0
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-29T23:55:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Lean Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Lean Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-29T23:55:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Small endpoint in 0.39s",
+          "duration": 390,
+          "status": "completed",
+          "metadata": {
+            "model": "Small"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8430",
+      "taskId": "TASK-031",
+      "taskName": "Extraction \u2014 Easy complexity #31",
+      "taskDescription": "Autonomous LLM workload processing 1143 input tokens",
+      "taskType": "Extraction",
+      "difficulty": "Easy",
+      "selectedModel": "Small",
+      "modelReasoning": "K-Means centroid nearest to token profile (1143 in, 161 out). HMM regime: Lean Mode.",
+      "status": "Success",
+      "cost": 0.0325,
+      "baselineCost": 0.4878,
+      "savings": 93.3,
+      "latency": 0.49,
+      "inputTokens": 1143,
+      "outputTokens": 161,
+      "optimizedTokens": 822,
+      "originalTokens": 1143,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-30T00:49:55.855281",
+      "completedAt": "2026-10-30T00:49:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-30T00:49:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 1143 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 1143
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-30T00:49:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Small model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 0
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-30T00:49:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Lean Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Lean Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-30T00:49:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Small endpoint in 0.49s",
+          "duration": 490,
+          "status": "completed",
+          "metadata": {
+            "model": "Small"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8431",
+      "taskId": "TASK-032",
+      "taskName": "Summary \u2014 Easy complexity #32",
+      "taskDescription": "Autonomous LLM workload processing 1872 input tokens",
+      "taskType": "Summary",
+      "difficulty": "Easy",
+      "selectedModel": "Small",
+      "modelReasoning": "K-Means centroid nearest to token profile (1872 in, 204 out). HMM regime: Lean Mode.",
+      "status": "Success",
+      "cost": 0.0497,
+      "baselineCost": 0.7452,
+      "savings": 93.3,
+      "latency": 1.4,
+      "inputTokens": 1872,
+      "outputTokens": 204,
+      "optimizedTokens": 1347,
+      "originalTokens": 1872,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-30T01:31:55.855281",
+      "completedAt": "2026-10-30T01:31:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-30T01:31:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 1872 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 1872
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-30T01:31:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Small model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 0
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-30T01:31:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Lean Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Lean Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-30T01:31:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Small endpoint in 1.4s",
+          "duration": 1400,
+          "status": "completed",
+          "metadata": {
+            "model": "Small"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8432",
+      "taskId": "TASK-033",
+      "taskName": "Classification \u2014 Easy complexity #33",
+      "taskDescription": "Autonomous LLM workload processing 1100 input tokens",
+      "taskType": "Classification",
+      "difficulty": "Easy",
+      "selectedModel": "Small",
+      "modelReasoning": "K-Means centroid nearest to token profile (1100 in, 154 out). HMM regime: Lean Mode.",
+      "status": "Success",
+      "cost": 0.0312,
+      "baselineCost": 0.4686,
+      "savings": 93.3,
+      "latency": 0.65,
+      "inputTokens": 1100,
+      "outputTokens": 154,
+      "optimizedTokens": 792,
+      "originalTokens": 1100,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-30T02:24:55.855281",
+      "completedAt": "2026-10-30T02:24:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-30T02:24:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 1100 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 1100
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-30T02:24:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Small model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 0
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-30T02:24:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Lean Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Lean Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-30T02:24:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Small endpoint in 0.65s",
+          "duration": 650,
+          "status": "completed",
+          "metadata": {
+            "model": "Small"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8433",
+      "taskId": "TASK-034",
+      "taskName": "Reasoning \u2014 Hard complexity #34",
+      "taskDescription": "Autonomous LLM workload processing 7535 input tokens",
+      "taskType": "Reasoning",
+      "difficulty": "Hard",
+      "selectedModel": "Large",
+      "modelReasoning": "K-Means centroid nearest to token profile (7535 in, 1436 out). HMM regime: Premium Mode.",
+      "status": "Success",
+      "cost": 3.5529,
+      "baselineCost": 3.5529,
+      "savings": 0.0,
+      "latency": 4.69,
+      "inputTokens": 7535,
+      "outputTokens": 1436,
+      "optimizedTokens": 5425,
+      "originalTokens": 7535,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-30T03:08:55.855281",
+      "completedAt": "2026-10-30T03:08:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-30T03:08:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 7535 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 7535
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-30T03:08:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Large model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 1
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-30T03:08:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Premium Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Premium Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-30T03:08:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Large endpoint in 4.69s",
+          "duration": 4690,
+          "status": "completed",
+          "metadata": {
+            "model": "Large"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8434",
+      "taskId": "TASK-035",
+      "taskName": "Summary \u2014 Medium complexity #35",
+      "taskDescription": "Autonomous LLM workload processing 3720 input tokens",
+      "taskType": "Summary",
+      "difficulty": "Medium",
+      "selectedModel": "Medium",
+      "modelReasoning": "K-Means centroid nearest to token profile (3720 in, 533 out). HMM regime: Balanced Mode.",
+      "status": "Success",
+      "cost": 0.4255,
+      "baselineCost": 1.5957,
+      "savings": 73.3,
+      "latency": 1.5,
+      "inputTokens": 3720,
+      "outputTokens": 533,
+      "optimizedTokens": 2678,
+      "originalTokens": 3720,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-30T04:01:55.855281",
+      "completedAt": "2026-10-30T04:01:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-30T04:01:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 3720 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 3720
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-30T04:01:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Medium model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 2
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-30T04:01:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Balanced Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Balanced Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-30T04:01:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Medium endpoint in 1.5s",
+          "duration": 1500,
+          "status": "completed",
+          "metadata": {
+            "model": "Medium"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8435",
+      "taskId": "TASK-036",
+      "taskName": "Conversational \u2014 Easy complexity #36",
+      "taskDescription": "Autonomous LLM workload processing 1635 input tokens",
+      "taskType": "Conversational",
+      "difficulty": "Easy",
+      "selectedModel": "Small",
+      "modelReasoning": "K-Means centroid nearest to token profile (1635 in, 185 out). HMM regime: Lean Mode.",
+      "status": "Success",
+      "cost": 0.0438,
+      "baselineCost": 0.657,
+      "savings": 93.3,
+      "latency": 0.61,
+      "inputTokens": 1635,
+      "outputTokens": 185,
+      "optimizedTokens": 1177,
+      "originalTokens": 1635,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-30T04:46:55.855281",
+      "completedAt": "2026-10-30T04:46:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-30T04:46:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 1635 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 1635
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-30T04:46:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Small model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 0
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-30T04:46:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Lean Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Lean Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-30T04:46:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Small endpoint in 0.61s",
+          "duration": 610,
+          "status": "completed",
+          "metadata": {
+            "model": "Small"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8436",
+      "taskId": "TASK-037",
+      "taskName": "Classification \u2014 Easy complexity #37",
+      "taskDescription": "Autonomous LLM workload processing 1283 input tokens",
+      "taskType": "Classification",
+      "difficulty": "Easy",
+      "selectedModel": "Small",
+      "modelReasoning": "K-Means centroid nearest to token profile (1283 in, 257 out). HMM regime: Lean Mode.",
+      "status": "Success",
+      "cost": 0.0411,
+      "baselineCost": 0.6162,
+      "savings": 93.3,
+      "latency": 0.49,
+      "inputTokens": 1283,
+      "outputTokens": 257,
+      "optimizedTokens": 923,
+      "originalTokens": 1283,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-30T05:40:55.855281",
+      "completedAt": "2026-10-30T05:40:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-30T05:40:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 1283 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 1283
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-30T05:40:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Small model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 0
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-30T05:40:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Lean Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Lean Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-30T05:40:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Small endpoint in 0.49s",
+          "duration": 490,
+          "status": "completed",
+          "metadata": {
+            "model": "Small"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8437",
+      "taskId": "TASK-038",
+      "taskName": "Classification \u2014 Easy complexity #38",
+      "taskDescription": "Autonomous LLM workload processing 829 input tokens",
+      "taskType": "Classification",
+      "difficulty": "Easy",
+      "selectedModel": "Small",
+      "modelReasoning": "K-Means centroid nearest to token profile (829 in, 79 out). HMM regime: Lean Mode.",
+      "status": "Success",
+      "cost": 0.0213,
+      "baselineCost": 0.3198,
+      "savings": 93.3,
+      "latency": 1.34,
+      "inputTokens": 829,
+      "outputTokens": 79,
+      "optimizedTokens": 596,
+      "originalTokens": 829,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-30T06:29:55.855281",
+      "completedAt": "2026-10-30T06:29:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-30T06:29:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 829 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 829
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-30T06:29:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Small model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 0
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-30T06:29:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Lean Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Lean Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-30T06:29:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Small endpoint in 1.34s",
+          "duration": 1340,
+          "status": "completed",
+          "metadata": {
+            "model": "Small"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8438",
+      "taskId": "TASK-039",
+      "taskName": "Coding \u2014 Medium complexity #39",
+      "taskDescription": "Autonomous LLM workload processing 3080 input tokens",
+      "taskType": "Coding",
+      "difficulty": "Medium",
+      "selectedModel": "Medium",
+      "modelReasoning": "K-Means centroid nearest to token profile (3080 in, 315 out). HMM regime: Balanced Mode.",
+      "status": "Success",
+      "cost": 0.322,
+      "baselineCost": 1.2075,
+      "savings": 73.3,
+      "latency": 1.28,
+      "inputTokens": 3080,
+      "outputTokens": 315,
+      "optimizedTokens": 2217,
+      "originalTokens": 3080,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-30T07:16:55.855281",
+      "completedAt": "2026-10-30T07:16:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-30T07:16:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 3080 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 3080
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-30T07:16:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Medium model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 2
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-30T07:16:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Balanced Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Balanced Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-30T07:16:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Medium endpoint in 1.28s",
+          "duration": 1280,
+          "status": "completed",
+          "metadata": {
+            "model": "Medium"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8439",
+      "taskId": "TASK-040",
+      "taskName": "Classification \u2014 Easy complexity #40",
+      "taskDescription": "Autonomous LLM workload processing 1324 input tokens",
+      "taskType": "Classification",
+      "difficulty": "Easy",
+      "selectedModel": "Small",
+      "modelReasoning": "K-Means centroid nearest to token profile (1324 in, 259 out). HMM regime: Lean Mode.",
+      "status": "Success",
+      "cost": 0.042,
+      "baselineCost": 0.6303,
+      "savings": 93.3,
+      "latency": 0.94,
+      "inputTokens": 1324,
+      "outputTokens": 259,
+      "optimizedTokens": 953,
+      "originalTokens": 1324,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-30T08:09:55.855281",
+      "completedAt": "2026-10-30T08:09:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-30T08:09:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 1324 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 1324
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-30T08:09:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Small model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 0
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-30T08:09:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Lean Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Lean Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-30T08:09:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Small endpoint in 0.94s",
+          "duration": 940,
+          "status": "completed",
+          "metadata": {
+            "model": "Small"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8440",
+      "taskId": "TASK-041",
+      "taskName": "Extraction \u2014 Easy complexity #41",
+      "taskDescription": "Autonomous LLM workload processing 1444 input tokens",
+      "taskType": "Extraction",
+      "difficulty": "Easy",
+      "selectedModel": "Small",
+      "modelReasoning": "K-Means centroid nearest to token profile (1444 in, 66 out). HMM regime: Lean Mode.",
+      "status": "Success",
+      "cost": 0.0328,
+      "baselineCost": 0.4926,
+      "savings": 93.3,
+      "latency": 0.54,
+      "inputTokens": 1444,
+      "outputTokens": 66,
+      "optimizedTokens": 1039,
+      "originalTokens": 1444,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-30T09:08:55.855281",
+      "completedAt": "2026-10-30T09:08:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-30T09:08:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 1444 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 1444
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-30T09:08:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Small model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 0
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-30T09:08:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Lean Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Lean Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-30T09:08:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Small endpoint in 0.54s",
+          "duration": 540,
+          "status": "completed",
+          "metadata": {
+            "model": "Small"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8441",
+      "taskId": "TASK-042",
+      "taskName": "Summary \u2014 Easy complexity #42",
+      "taskDescription": "Autonomous LLM workload processing 2983 input tokens",
+      "taskType": "Summary",
+      "difficulty": "Easy",
+      "selectedModel": "Small",
+      "modelReasoning": "K-Means centroid nearest to token profile (2983 in, 269 out). HMM regime: Lean Mode.",
+      "status": "Success",
+      "cost": 0.0758,
+      "baselineCost": 1.137,
+      "savings": 73.3,
+      "latency": 2.83,
+      "inputTokens": 2983,
+      "outputTokens": 269,
+      "optimizedTokens": 2147,
+      "originalTokens": 2983,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-30T09:59:55.855281",
+      "completedAt": "2026-10-30T09:59:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-30T09:59:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 2983 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 2983
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-30T09:59:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Small model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 0
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-30T09:59:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Lean Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Lean Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-30T09:59:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Small endpoint in 2.83s",
+          "duration": 2830,
+          "status": "completed",
+          "metadata": {
+            "model": "Small"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8442",
+      "taskId": "TASK-043",
+      "taskName": "Coding \u2014 Easy complexity #43",
+      "taskDescription": "Autonomous LLM workload processing 3016 input tokens",
+      "taskType": "Coding",
+      "difficulty": "Easy",
+      "selectedModel": "Medium",
+      "modelReasoning": "K-Means centroid nearest to token profile (3016 in, 418 out). HMM regime: Balanced Mode.",
+      "status": "Success",
+      "cost": 0.3416,
+      "baselineCost": 1.281,
+      "savings": 73.3,
+      "latency": 1.73,
+      "inputTokens": 3016,
+      "outputTokens": 418,
+      "optimizedTokens": 2171,
+      "originalTokens": 3016,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-30T10:43:55.855281",
+      "completedAt": "2026-10-30T10:43:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-30T10:43:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 3016 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 3016
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-30T10:43:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Medium model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 2
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-30T10:43:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Balanced Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Balanced Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-30T10:43:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Medium endpoint in 1.73s",
+          "duration": 1730,
+          "status": "completed",
+          "metadata": {
+            "model": "Medium"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8443",
+      "taskId": "TASK-044",
+      "taskName": "Extraction \u2014 Medium complexity #44",
+      "taskDescription": "Autonomous LLM workload processing 4123 input tokens",
+      "taskType": "Extraction",
+      "difficulty": "Medium",
+      "selectedModel": "Medium",
+      "modelReasoning": "K-Means centroid nearest to token profile (4123 in, 264 out). HMM regime: Balanced Mode.",
+      "status": "Success",
+      "cost": 0.3932,
+      "baselineCost": 1.4745,
+      "savings": 73.3,
+      "latency": 1.42,
+      "inputTokens": 4123,
+      "outputTokens": 264,
+      "optimizedTokens": 2968,
+      "originalTokens": 4123,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-30T11:30:55.855281",
+      "completedAt": "2026-10-30T11:30:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-30T11:30:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 4123 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 4123
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-30T11:30:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Medium model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 2
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-30T11:30:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Balanced Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Balanced Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-30T11:30:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Medium endpoint in 1.42s",
+          "duration": 1420,
+          "status": "completed",
+          "metadata": {
+            "model": "Medium"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8444",
+      "taskId": "TASK-045",
+      "taskName": "Agentic \u2014 Hard complexity #45",
+      "taskDescription": "Autonomous LLM workload processing 6579 input tokens",
+      "taskType": "Agentic",
+      "difficulty": "Hard",
+      "selectedModel": "Large",
+      "modelReasoning": "K-Means centroid nearest to token profile (6579 in, 953 out). HMM regime: Premium Mode.",
+      "status": "Success",
+      "cost": 2.8314,
+      "baselineCost": 2.8314,
+      "savings": 0.0,
+      "latency": 5.28,
+      "inputTokens": 6579,
+      "outputTokens": 953,
+      "optimizedTokens": 4736,
+      "originalTokens": 6579,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-30T12:18:55.855281",
+      "completedAt": "2026-10-30T12:18:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-30T12:18:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 6579 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 6579
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-30T12:18:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Large model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 1
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-30T12:18:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Premium Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Premium Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-30T12:18:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Large endpoint in 5.28s",
+          "duration": 5280,
+          "status": "completed",
+          "metadata": {
+            "model": "Large"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8445",
+      "taskId": "TASK-046",
+      "taskName": "Agentic \u2014 Hard complexity #46",
+      "taskDescription": "Autonomous LLM workload processing 6586 input tokens",
+      "taskType": "Agentic",
+      "difficulty": "Hard",
+      "selectedModel": "Large",
+      "modelReasoning": "K-Means centroid nearest to token profile (6586 in, 601 out). HMM regime: Premium Mode.",
+      "status": "Success",
+      "cost": 2.5167,
+      "baselineCost": 2.5167,
+      "savings": 0.0,
+      "latency": 4.57,
+      "inputTokens": 6586,
+      "outputTokens": 601,
+      "optimizedTokens": 4741,
+      "originalTokens": 6586,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-30T13:11:55.855281",
+      "completedAt": "2026-10-30T13:11:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-30T13:11:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 6586 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 6586
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-30T13:11:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Large model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 1
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-30T13:11:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Premium Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Premium Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-30T13:11:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Large endpoint in 4.57s",
+          "duration": 4570,
+          "status": "completed",
+          "metadata": {
+            "model": "Large"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8446",
+      "taskId": "TASK-047",
+      "taskName": "Conversational \u2014 Easy complexity #47",
+      "taskDescription": "Autonomous LLM workload processing 1876 input tokens",
+      "taskType": "Conversational",
+      "difficulty": "Easy",
+      "selectedModel": "Small",
+      "modelReasoning": "K-Means centroid nearest to token profile (1876 in, 140 out). HMM regime: Lean Mode.",
+      "status": "Success",
+      "cost": 0.0459,
+      "baselineCost": 0.6888,
+      "savings": 93.3,
+      "latency": 1.05,
+      "inputTokens": 1876,
+      "outputTokens": 140,
+      "optimizedTokens": 1350,
+      "originalTokens": 1876,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-30T14:04:55.855281",
+      "completedAt": "2026-10-30T14:04:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-30T14:04:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 1876 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 1876
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-30T14:04:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Small model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 0
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-30T14:04:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Lean Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Lean Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-30T14:04:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Small endpoint in 1.05s",
+          "duration": 1050,
+          "status": "completed",
+          "metadata": {
+            "model": "Small"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8447",
+      "taskId": "TASK-048",
+      "taskName": "Conversational \u2014 Easy complexity #48",
+      "taskDescription": "Autonomous LLM workload processing 1735 input tokens",
+      "taskType": "Conversational",
+      "difficulty": "Easy",
+      "selectedModel": "Small",
+      "modelReasoning": "K-Means centroid nearest to token profile (1735 in, 92 out). HMM regime: Lean Mode.",
+      "status": "Success",
+      "cost": 0.0402,
+      "baselineCost": 0.6033,
+      "savings": 93.3,
+      "latency": 0.55,
+      "inputTokens": 1735,
+      "outputTokens": 92,
+      "optimizedTokens": 1249,
+      "originalTokens": 1735,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-30T14:57:55.855281",
+      "completedAt": "2026-10-30T14:57:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-30T14:57:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 1735 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 1735
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-30T14:57:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Small model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 0
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-30T14:57:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Lean Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Lean Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-30T14:57:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Small endpoint in 0.55s",
+          "duration": 550,
+          "status": "completed",
+          "metadata": {
+            "model": "Small"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8448",
+      "taskId": "TASK-049",
+      "taskName": "Extraction \u2014 Medium complexity #49",
+      "taskDescription": "Autonomous LLM workload processing 3031 input tokens",
+      "taskType": "Extraction",
+      "difficulty": "Medium",
+      "selectedModel": "Medium",
+      "modelReasoning": "K-Means centroid nearest to token profile (3031 in, 530 out). HMM regime: Balanced Mode.",
+      "status": "Success",
+      "cost": 0.3697,
+      "baselineCost": 1.3863,
+      "savings": 73.3,
+      "latency": 2.78,
+      "inputTokens": 3031,
+      "outputTokens": 530,
+      "optimizedTokens": 2182,
+      "originalTokens": 3031,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-30T15:41:55.855281",
+      "completedAt": "2026-10-30T15:41:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-30T15:41:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 3031 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 3031
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-30T15:41:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Medium model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 2
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-30T15:41:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Balanced Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Balanced Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-30T15:41:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Medium endpoint in 2.78s",
+          "duration": 2780,
+          "status": "completed",
+          "metadata": {
+            "model": "Medium"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXEC-8449",
+      "taskId": "TASK-050",
+      "taskName": "Reasoning \u2014 Medium complexity #50",
+      "taskDescription": "Autonomous LLM workload processing 3104 input tokens",
+      "taskType": "Reasoning",
+      "difficulty": "Medium",
+      "selectedModel": "Medium",
+      "modelReasoning": "K-Means centroid nearest to token profile (3104 in, 476 out). HMM regime: Balanced Mode.",
+      "status": "Success",
+      "cost": 0.3626,
+      "baselineCost": 1.3596,
+      "savings": 73.3,
+      "latency": 2.48,
+      "inputTokens": 3104,
+      "outputTokens": 476,
+      "optimizedTokens": 2234,
+      "originalTokens": 3104,
+      "retries": 0,
+      "toolCalls": [
+        "token_counter",
+        "complexity_evaluator",
+        "kmeans_router"
+      ],
+      "verificationResult": "PASSED: Output quality verified within tolerance",
+      "createdAt": "2026-10-30T16:30:55.855281",
+      "completedAt": "2026-10-30T16:30:55.855281",
+      "traceSteps": [
+        {
+          "id": "s1",
+          "timestamp": "2026-10-30T16:30:55.855281",
+          "phase": "observe",
+          "label": "Task Ingestion",
+          "description": "Extracted 3104 prompt tokens",
+          "duration": 12,
+          "status": "completed",
+          "metadata": {
+            "tokens": 3104
+          }
+        },
+        {
+          "id": "s2",
+          "timestamp": "2026-10-30T16:30:55.855281",
+          "phase": "predict",
+          "label": "K-Means Complexity Scoring",
+          "description": "Cluster assigned: Medium model tier",
+          "duration": 8,
+          "status": "completed",
+          "metadata": {
+            "cluster": 2
+          }
+        },
+        {
+          "id": "s3",
+          "timestamp": "2026-10-30T16:30:55.855281",
+          "phase": "decide",
+          "label": "HMM Regime Check",
+          "description": "Workload regime: Balanced Mode",
+          "duration": 4,
+          "status": "completed",
+          "metadata": {
+            "regime": "Balanced Mode"
+          }
+        },
+        {
+          "id": "s4",
+          "timestamp": "2026-10-30T16:30:55.855281",
+          "phase": "execute",
+          "label": "Model Invocation",
+          "description": "Executed on Medium endpoint in 2.48s",
+          "duration": 2480,
+          "status": "completed",
+          "metadata": {
+            "model": "Medium"
+          }
+        }
+      ]
+    }
+  ],
+  "ensemble_analysis": {
+    "status": "verified",
+    "generated_at": "2026-11-18T23:26:18.371741",
+    "best_model": {
+      "name": "Random Forest",
+      "accuracy": 96.0,
+      "f1_macro": 95.79,
+      "roc_auc": 0.9662,
+      "latency_us": 4386.8,
+      "artifact_path": "saved_models/best_ensemble_model.joblib"
+    },
+    "comparison_table": [
+      {
+        "Model": "Decision Tree (Baseline)",
+        "Accuracy": 95.0,
+        "Train Accuracy": 99.25,
+        "Generalization Gap": 4.25,
+        "Precision (Macro)": 95.31,
+        "Recall (Macro)": 94.95,
+        "F1-Score (Macro)": 94.84,
+        "F1-Score (Weighted)": 94.89,
+        "ROC-AUC (OvR)": 0.9631,
+        "Latency (us/task)": 718.5,
+        "Throughput (tasks/s)": 1391.8
+      },
+      {
+        "Model": "Random Forest",
+        "Accuracy": 96.0,
+        "Train Accuracy": 98.5,
+        "Generalization Gap": 2.5,
+        "Precision (Macro)": 96.02,
+        "Recall (Macro)": 95.96,
+        "F1-Score (Macro)": 95.79,
+        "F1-Score (Weighted)": 95.93,
+        "ROC-AUC (OvR)": 0.9662,
+        "Latency (us/task)": 4386.8,
+        "Throughput (tasks/s)": 228.0
+      },
+      {
+        "Model": "Extra Trees",
+        "Accuracy": 96.0,
+        "Train Accuracy": 98.5,
+        "Generalization Gap": 2.5,
+        "Precision (Macro)": 96.02,
+        "Recall (Macro)": 95.96,
+        "F1-Score (Macro)": 95.79,
+        "F1-Score (Weighted)": 95.93,
+        "ROC-AUC (OvR)": 0.96,
+        "Latency (us/task)": 4081.3,
+        "Throughput (tasks/s)": 245.0
+      },
+      {
+        "Model": "AdaBoost",
+        "Accuracy": 96.0,
+        "Train Accuracy": 100.0,
+        "Generalization Gap": 4.0,
+        "Precision (Macro)": 96.02,
+        "Recall (Macro)": 95.96,
+        "F1-Score (Macro)": 95.79,
+        "F1-Score (Weighted)": 95.93,
+        "ROC-AUC (OvR)": 0.9767,
+        "Latency (us/task)": 6826.8,
+        "Throughput (tasks/s)": 146.5
+      },
+      {
+        "Model": "Gradient Boosting",
+        "Accuracy": 96.0,
+        "Train Accuracy": 100.0,
+        "Generalization Gap": 4.0,
+        "Precision (Macro)": 96.02,
+        "Recall (Macro)": 95.96,
+        "F1-Score (Macro)": 95.79,
+        "F1-Score (Weighted)": 95.93,
+        "ROC-AUC (OvR)": 0.966,
+        "Latency (us/task)": 788.1,
+        "Throughput (tasks/s)": 1268.9
+      },
+      {
+        "Model": "Soft Voting Classifier",
+        "Accuracy": 96.0,
+        "Train Accuracy": 100.0,
+        "Generalization Gap": 4.0,
+        "Precision (Macro)": 96.02,
+        "Recall (Macro)": 95.96,
+        "F1-Score (Macro)": 95.79,
+        "F1-Score (Weighted)": 95.93,
+        "ROC-AUC (OvR)": 0.962,
+        "Latency (us/task)": 9638.0,
+        "Throughput (tasks/s)": 103.8
+      },
+      {
+        "Model": "Bayesian Model Averaging",
+        "Accuracy": 96.0,
+        "Train Accuracy": 100.0,
+        "Generalization Gap": 4.0,
+        "Precision (Macro)": 96.02,
+        "Recall (Macro)": 95.96,
+        "F1-Score (Macro)": 95.79,
+        "F1-Score (Weighted)": 95.93,
+        "ROC-AUC (OvR)": 0.9602,
+        "Latency (us/task)": 8532.8,
+        "Throughput (tasks/s)": 117.2
+      },
+      {
+        "Model": "Stacking Classifier",
+        "Accuracy": 96.0,
+        "Train Accuracy": 99.0,
+        "Generalization Gap": 3.0,
+        "Precision (Macro)": 96.02,
+        "Recall (Macro)": 95.96,
+        "F1-Score (Macro)": 95.79,
+        "F1-Score (Weighted)": 95.93,
+        "ROC-AUC (OvR)": 0.9629,
+        "Latency (us/task)": 10152.3,
+        "Throughput (tasks/s)": 98.5
+      }
+    ],
+    "confusion_matrices": {
+      "Decision Tree (Baseline)": [
+        [
+          28,
+          3,
+          2
+        ],
+        [
+          0,
+          42,
+          0
+        ],
+        [
+          0,
+          0,
+          25
+        ]
+      ],
+      "Random Forest": [
+        [
+          29,
+          2,
+          2
+        ],
+        [
+          0,
+          42,
+          0
+        ],
+        [
+          0,
+          0,
+          25
+        ]
+      ],
+      "Extra Trees": [
+        [
+          29,
+          2,
+          2
+        ],
+        [
+          0,
+          42,
+          0
+        ],
+        [
+          0,
+          0,
+          25
+        ]
+      ],
+      "AdaBoost": [
+        [
+          29,
+          2,
+          2
+        ],
+        [
+          0,
+          42,
+          0
+        ],
+        [
+          0,
+          0,
+          25
+        ]
+      ],
+      "Gradient Boosting": [
+        [
+          29,
+          2,
+          2
+        ],
+        [
+          0,
+          42,
+          0
+        ],
+        [
+          0,
+          0,
+          25
+        ]
+      ],
+      "Soft Voting Classifier": [
+        [
+          29,
+          2,
+          2
+        ],
+        [
+          0,
+          42,
+          0
+        ],
+        [
+          0,
+          0,
+          25
+        ]
+      ],
+      "Bayesian Model Averaging": [
+        [
+          29,
+          2,
+          2
+        ],
+        [
+          0,
+          42,
+          0
+        ],
+        [
+          0,
+          0,
+          25
+        ]
+      ],
+      "Stacking Classifier": [
+        [
+          29,
+          2,
+          2
+        ],
+        [
+          0,
+          42,
+          0
+        ],
+        [
+          0,
+          0,
+          25
+        ]
+      ]
+    },
+    "feature_importances": {
+      "Random Forest": {
+        "input_tokens": 0.375,
+        "output_tokens": 0.3098,
+        "latency": 0.2366,
+        "task_type_enc": 0.0065,
+        "difficulty_enc": 0.0721
+      },
+      "Extra Trees": {
+        "input_tokens": 0.2661,
+        "output_tokens": 0.2427,
+        "latency": 0.1901,
+        "task_type_enc": 0.0691,
+        "difficulty_enc": 0.232
+      },
+      "Gradient Boosting": {
+        "input_tokens": 0.6456,
+        "output_tokens": 0.3287,
+        "latency": 0.0213,
+        "task_type_enc": 0.0006,
+        "difficulty_enc": 0.0038
+      }
+    },
+    "bma_analysis": {
+      "log_likelihoods": {
+        "rf": -158.96893386405662,
+        "et": -78.50806672851832,
+        "gb": -69.7248763553345
+      },
+      "posterior_weights": {
+        "rf": 0.033758738279838066,
+        "et": 0.41723157099415686,
+        "gb": 0.5490096907260051
+      },
+      "raw_weights": {
+        "rf": 1.744744002642388e-39,
+        "et": 0.00015326476381295127,
+        "gb": 0.9998467352361871
+      },
+      "oof_accuracy": {
+        "rf": 0.985,
+        "et": 0.985,
+        "gb": 0.9825
+      }
+    },
+    "class_order": [
+      "Small",
+      "Medium",
+      "Large"
+    ]
+  }
+}

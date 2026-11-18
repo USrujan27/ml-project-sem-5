@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="460" viewBox="0 0 1000 460">
+<rect width="100%" height="100%" fill="#0a0a0d"/>
+<text x="50" y="35" fill="#f4f4f5" font-family="monospace" font-size="14" font-weight="bold">K-Means Clusters (PCA 2D Projection)</text>
+<rect x="50" y="50" width="450" height="360" fill="#111114" stroke="#27272a" rx="6"/>
+<line x1="50" y1="230" x2="500" y2="230" stroke="#27272a" stroke-dasharray="2,2"/>
+<line x1="275" y1="50" x2="275" y2="410" stroke="#27272a" stroke-dasharray="2,2"/>
+<text x="490" y="245" fill="#71717a" font-family="monospace" font-size="10" text-anchor="end">PC1 (Tokens/Complexity)</text>
+<text x="285" y="65" fill="#71717a" font-family="monospace" font-size="10">PC2 (Latency)</text>
+<circle cx="120" cy="280" r="4" fill="#10b981" opacity="0.75"/>
+<circle cx="136" cy="283" r="4" fill="#10b981" opacity="0.75"/>
+<circle cx="152" cy="286" r="4" fill="#10b981" opacity="0.75"/>
+<circle cx="272" cy="213" r="4" fill="#f59e0b" opacity="0.75"/>
+<circle cx="276" cy="214" r="4" fill="#f59e0b" opacity="0.75"/>
+<circle cx="170" cy="295" r="4" fill="#10b981" opacity="0.75"/>
+<circle cx="186" cy="328" r="4" fill="#10b981" opacity="0.75"/>
+<circle cx="202" cy="331" r="4" fill="#10b981" opacity="0.75"/>
+<circle cx="320" cy="258" r="4" fill="#f59e0b" opacity="0.75"/>
+<circle cx="394" cy="124" r="4" fill="#ef4444" opacity="0.75"/>
+<circle cx="328" cy="210" r="4" fill="#f59e0b" opacity="0.75"/>
+<circle cx="398" cy="167" r="4" fill="#ef4444" opacity="0.75"/>
+<circle cx="424" cy="171" r="4" fill="#ef4444" opacity="0.75"/>
+<circle cx="340" cy="213" r="4" fill="#f59e0b" opacity="0.75"/>
+<circle cx="372" cy="214" r="4" fill="#f59e0b" opacity="0.75"/>
+<circle cx="256" cy="255" r="4" fill="#f59e0b" opacity="0.75"/>
+<circle cx="260" cy="256" r="4" fill="#f59e0b" opacity="0.75"/>
+<circle cx="458" cy="149" r="4" fill="#ef4444" opacity="0.75"/>
+<circle cx="388" cy="153" r="4" fill="#ef4444" opacity="0.75"/>
+<circle cx="390" cy="157" r="4" fill="#ef4444" opacity="0.75"/>
+<circle cx="276" cy="210" r="4" fill="#f59e0b" opacity="0.75"/>
+<circle cx="216" cy="305" r="4" fill="#10b981" opacity="0.75"/>
+<circle cx="232" cy="308" r="4" fill="#10b981" opacity="0.75"/>
+<circle cx="248" cy="311" r="4" fill="#10b981" opacity="0.75"/>
+<circle cx="144" cy="280" r="4" fill="#10b981" opacity="0.75"/>
+<circle cx="324" cy="255" r="4" fill="#f59e0b" opacity="0.75"/>
+<circle cx="328" cy="256" r="4" fill="#f59e0b" opacity="0.75"/>
+<circle cx="332" cy="257" r="4" fill="#f59e0b" opacity="0.75"/>
+<circle cx="178" cy="292" r="4" fill="#10b981" opacity="0.75"/>
+<circle cx="194" cy="295" r="4" fill="#10b981" opacity="0.75"/>
+<circle cx="180" cy="328" r="4" fill="#10b981" opacity="0.75"/>
+<circle cx="196" cy="331" r="4" fill="#10b981" opacity="0.75"/>
+<circle cx="212" cy="270" r="4" fill="#10b981" opacity="0.75"/>
+<circle cx="442" cy="164" r="4" fill="#ef4444" opacity="0.75"/>
+<circle cx="268" cy="214" r="4" fill="#f59e0b" opacity="0.75"/>
+<circle cx="230" cy="279" r="4" fill="#10b981" opacity="0.75"/>
+<circle cx="126" cy="312" r="4" fill="#10b981" opacity="0.75"/>
+<circle cx="142" cy="315" r="4" fill="#10b981" opacity="0.75"/>
+<circle cx="312" cy="258" r="4" fill="#f59e0b" opacity="0.75"/>
+<circle cx="174" cy="321" r="4" fill="#10b981" opacity="0.75"/>
+<circle cx="160" cy="260" r="4" fill="#10b981" opacity="0.75"/>
+<circle cx="176" cy="263" r="4" fill="#10b981" opacity="0.75"/>
+<circle cx="356" cy="212" r="4" fill="#f59e0b" opacity="0.75"/>
+<circle cx="360" cy="213" r="4" fill="#f59e0b" opacity="0.75"/>
+<circle cx="464" cy="124" r="4" fill="#ef4444" opacity="0.75"/>
+<circle cx="394" cy="163" r="4" fill="#ef4444" opacity="0.75"/>
+<circle cx="226" cy="308" r="4" fill="#10b981" opacity="0.75"/>
+<circle cx="242" cy="311" r="4" fill="#10b981" opacity="0.75"/>
+<circle cx="260" cy="258" r="4" fill="#f59e0b" opacity="0.75"/>
+<circle cx="292" cy="259" r="4" fill="#f59e0b" opacity="0.75"/>
+<polygon points="165,293 169,302 178,302 171,308 174,317 165,311 156,317 159,308 152,302 161,302" fill="#10b981" stroke="#ffffff" stroke-width="1.5"/>
+<text x="165" y="329" fill="#ffffff" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle">★ Small</text>
+<polygon points="300,218 304,227 313,227 306,233 309,242 300,236 291,242 294,233 287,227 296,227" fill="#f59e0b" stroke="#ffffff" stroke-width="1.5"/>
+<text x="300" y="254" fill="#ffffff" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle">★ Medium</text>
+<polygon points="430,138 434,147 443,147 436,153 439,162 430,156 421,162 424,153 417,147 426,147" fill="#ef4444" stroke="#ffffff" stroke-width="1.5"/>
+<text x="430" y="174" fill="#ffffff" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle">★ Large</text>
+<text x="540" y="35" fill="#f4f4f5" font-family="monospace" font-size="14" font-weight="bold">Workload Model Distribution (500 Tasks)</text>
+<rect x="540" y="50" width="410" height="360" fill="#111114" stroke="#27272a" rx="6"/>
+<circle cx="745" cy="200" r="88" fill="none" stroke="#10b981" stroke-width="44" stroke-dasharray="175 378" stroke-dashoffset="0"/>
+<circle cx="745" cy="200" r="88" fill="none" stroke="#f59e0b" stroke-width="44" stroke-dasharray="235 318" stroke-dashoffset="-175"/>
+<circle cx="745" cy="200" r="88" fill="none" stroke="#ef4444" stroke-width="44" stroke-dasharray="144 409" stroke-dashoffset="-410"/>
+<text x="745" y="195" fill="#ffffff" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">500 Tasks</text>
+<text x="745" y="215" fill="#a1a1aa" font-family="monospace" font-size="11" text-anchor="middle">100% Routed</text>
+<rect x="560" y="350" width="12" height="12" fill="#10b981" rx="2"/>
+<text x="578" y="360" fill="#f4f4f5" font-family="monospace" font-size="11" font-weight="bold">Small: 31.6%</text>
+<text x="578" y="374" fill="#71717a" font-family="monospace" font-size="10">158 calls</text>
+<rect x="690" y="350" width="12" height="12" fill="#f59e0b" rx="2"/>
+<text x="708" y="360" fill="#f4f4f5" font-family="monospace" font-size="11" font-weight="bold">Medium: 42.4%</text>
+<text x="708" y="374" fill="#71717a" font-family="monospace" font-size="10">212 calls</text>
+<rect x="820" y="350" width="12" height="12" fill="#ef4444" rx="2"/>
+<text x="838" y="360" fill="#f4f4f5" font-family="monospace" font-size="11" font-weight="bold">Large: 26.0%</text>
+<text x="838" y="374" fill="#71717a" font-family="monospace" font-size="10">130 calls</text>
+</svg>

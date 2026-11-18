@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="420" viewBox="0 0 1000 420">
+<rect width="100%" height="100%" fill="#0a0a0d"/>
+<text x="50" y="35" fill="#f4f4f5" font-family="monospace" font-size="14" font-weight="bold">Total Cost Comparison — 500 Tasks (Lower is Better)</text>
+<rect x="50" y="50" width="430" height="320" fill="#111114" stroke="#27272a" rx="6"/>
+<rect x="95" y="128.33333333333331" width="80" height="191.66666666666669" fill="#ef4444" rx="4"/>
+<text x="135.0" y="118.33333333333331" fill="#ffffff" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">₹770.20</text>
+<text x="135.0" y="335" fill="#a1a1aa" font-family="monospace" font-size="11" text-anchor="middle">Always-Large</text>
+<text x="135.0" y="349" fill="#a1a1aa" font-family="monospace" font-size="11" text-anchor="middle">(Baseline)</text>
+<rect x="220" y="237.965571712975" width="80" height="82.03442828702501" fill="#f59e0b" rx="4"/>
+<text x="260.0" y="227.965571712975" fill="#ffffff" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">₹329.65</text>
+<text x="260.0" y="335" fill="#a1a1aa" font-family="monospace" font-size="11" text-anchor="middle">Random</text>
+<text x="260.0" y="349" fill="#a1a1aa" font-family="monospace" font-size="11" text-anchor="middle">Routing</text>
+<rect x="345" y="200.70230676014887" width="80" height="119.29769323985113" fill="#10b981" rx="4"/>
+<text x="385.0" y="190.70230676014887" fill="#ffffff" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">₹479.39 ◄</text>
+<text x="385.0" y="335" fill="#a1a1aa" font-family="monospace" font-size="11" text-anchor="middle">K-Means</text>
+<text x="385.0" y="349" fill="#a1a1aa" font-family="monospace" font-size="11" text-anchor="middle">Governor</text>
+<rect x="70" y="70" width="220" height="35" fill="#064e3b" stroke="#059669" rx="4"/>
+<text x="180" y="92" fill="#6ee7b7" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle">💰 Saves ₹290.81 (37.8%)</text>
+<text x="520" y="35" fill="#f4f4f5" font-family="monospace" font-size="14" font-weight="bold">K-Means Routing Confusion Matrix (Actual vs Pred)</text>
+<rect x="520" y="50" width="430" height="320" fill="#111114" stroke="#27272a" rx="6"/>
+<text x="735" y="75" fill="#71717a" font-family="monospace" font-size="11" text-anchor="middle">Predicted Model Tier →</text>
+<text x="545" y="210" fill="#71717a" font-family="monospace" font-size="11" text-anchor="middle" transform="rotate(-90 545,210)">Actual Model Tier →</text>
+<text x="585" y="141.5" fill="#e4e4e7" font-family="monospace" font-size="12" font-weight="bold" text-anchor="end">Small</text>
+<rect x="600" y="100" width="71" height="71" fill="#1e3a8a" stroke="#3b82f6" rx="4"/>
+<text x="635.5" y="142.5" fill="#ffffff" font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle">153</text>
+<text x="635.5" y="90" fill="#e4e4e7" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">Small</text>
+<rect x="675" y="100" width="71" height="71" fill="#451a03" stroke="#b45309" rx="4"/>
+<text x="710.5" y="142.5" fill="#ffffff" font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle">9</text>
+<text x="710.5" y="90" fill="#e4e4e7" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">Medium</text>
+<rect x="750" y="100" width="71" height="71" fill="#451a03" stroke="#b45309" rx="4"/>
+<text x="785.5" y="142.5" fill="#ffffff" font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle">3</text>
+<text x="785.5" y="90" fill="#e4e4e7" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">Large</text>
+<text x="585" y="216.5" fill="#e4e4e7" font-family="monospace" font-size="12" font-weight="bold" text-anchor="end">Medium</text>
+<rect x="600" y="175" width="71" height="71" fill="#451a03" stroke="#b45309" rx="4"/>
+<text x="635.5" y="217.5" fill="#ffffff" font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle">5</text>
+<rect x="675" y="175" width="71" height="71" fill="#1e3a8a" stroke="#3b82f6" rx="4"/>
+<text x="710.5" y="217.5" fill="#ffffff" font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle">202</text>
+<rect x="750" y="175" width="71" height="71" fill="#451a03" stroke="#b45309" rx="4"/>
+<text x="785.5" y="217.5" fill="#ffffff" font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle">1</text>
+<text x="585" y="291.5" fill="#e4e4e7" font-family="monospace" font-size="12" font-weight="bold" text-anchor="end">Large</text>
+<rect x="600" y="250" width="71" height="71" fill="#18181b" stroke="#27272a" rx="4"/>
+<text x="635.5" y="292.5" fill="#ffffff" font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle">0</text>
+<rect x="675" y="250" width="71" height="71" fill="#451a03" stroke="#b45309" rx="4"/>
+<text x="710.5" y="292.5" fill="#ffffff" font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle">1</text>
+<rect x="750" y="250" width="71" height="71" fill="#1e3a8a" stroke="#3b82f6" rx="4"/>
+<text x="785.5" y="292.5" fill="#ffffff" font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle">126</text>
+<text x="735" y="350" fill="#10b981" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">Overall Routing Accuracy: 96.20%</text>
+</svg>

@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Node
+node_modules/
+dist/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Antigravity application data
+annotations/
+bin/
+brain/
+builtin/
+cache/
+conversations/
+crashes/
+daemon/
+knowledge/
+log/
+mcp/
+plugin_data/
+presence/
+agyhub_summaries_proto.pb
+antigravity_state.pbtxt
+cli.log
+conversation_summaries.db
+installation_id
+
+# Temporary files
+*.tmp
+.DS_Store
